@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn server for andrewWebapp
+
+[Service]
+Restart=on-failure
+User=ubuntu
+WorkingDirectory=/home/ubuntu/apk
+EnvironmentFile=/home/ubuntu/apk/.env
+
+ExecStart=/home/ubuntu/.local/bin/gunicorn --bind unix:/tmp/ec2-3-131-97-252.us-east-2.compute.amazonaws.com.socket iot_app.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
