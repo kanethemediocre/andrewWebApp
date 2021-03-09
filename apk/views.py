@@ -9,4 +9,4 @@ def home_page(request):
 
 def game_page(request):
    context = {}
-   return render(request, 'UmoSpace107.html', context)
+   return render(request, 'UmoSpace151.html', context)
