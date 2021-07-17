@@ -60,10 +60,6 @@
 				i=i+1;
 				}
 			 }
-		//var cxytest = [ ["first", "column", "of", "words"], ["2nd", "column", "of", "words"]       ];
-		//showchart(cxytest, 64, 16, 300,300);
-		
-		
 		function showmessage(message){ //Displays a message, breaking it up into multiple lines as needed.  No word continuity or overflow handling yet.
 			var maxlength = (canvas.width-840)/11; //estimating font width to 10 px, allotting 150 px margins
 			var maxlines = canvas.height/(24*6); //estimating font height to 24 px, allotting 1/6 of screen, only used for overflow handling (eventually)
@@ -228,13 +224,8 @@
 							context.lineWidth = 1; 
 							context.stroke();	//ok now actually draw it.	
 							}
-						
 						}
-					
 					}
-		
-		//drawmap(planets,1000,canvas.width/2,200);//scale of -1 indicates autozoom?  xx,yy are screen coords
-		
 		function pointingat(objdir,dir,distance,size){ //are you pointing at a thing?
 			var as = Math.atan2(size,distance); //how much angle does the thing occupy?
 			var dd = dir - objdir; //How much off the actual direction are you pointing?
@@ -676,7 +667,6 @@ class System{
 		normalizepoly(randomplayerverts);
 		var gangpolytheta = randomplayerverts[0];
 		var gangpolyradius = randomplayerverts[1];
-		
 		var i = gangsize;
 		while (i>0){
 			i=i-1;
@@ -712,7 +702,6 @@ class System{
 					}
 				}
 			}
-		
 		}
 	//////////////////Function tests
 	let testsystem = new System(2,"thetestsystem");

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 def home_page(request):
@@ -8,5 +8,4 @@ def home_page(request):
 
 
 def game_page(request):
-   context = {}
-   return render(request, 'UmoSpace151.html', context)
+    return redirect("https://kanethemediocre.github.io/")
